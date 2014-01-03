@@ -97,7 +97,11 @@ int listComPorts(void)
 
     int port_count = 0;
 
-    FOR_EACH(objDevice, colDevices, NULL) {
+	printf("\n");
+	printf("------------------------------------------\n");
+	printf("COM #  - Manufacturer\n");
+	printf("------------------------------------------\n");
+	FOR_EACH(objDevice, colDevices, NULL) {
         
         char* name = NULL;
         char* pnpid = NULL;
@@ -113,7 +117,7 @@ int listComPorts(void)
             dhGetValue(L"%s", &manu, objDevice,  L".Manufacturer");
             port_count++;
             char* comname = strtok( match, "()");
-            printf("%s - %s - %s\n",comname, manu, pnpid);
+            printf("%-6s - %s\n",comname, manu);
             dhFreeString(manu);
         }
         
@@ -121,7 +125,7 @@ int listComPorts(void)
         dhFreeString(pnpid);
         
     } NEXT(objDevice);
-    
+    printf("------------------------------------------\n");
     SAFE_RELEASE(colDevices);
     SAFE_RELEASE(wmiSvc);
     
