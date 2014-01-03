@@ -10,16 +10,14 @@ Usage Notes
 -----------
 ListCOMPorts.exe will print a table of available COM Ports like so:     
 
-``
-------------------------------------------     
-COM #  - Manufacturer     
-------------------------------------------     
-COM16  - Texas Instruments Incorporated            
-COM1   - (Standard port types)     
-COM2   - FTDI     
-COM14  - Texas Instruments Incorporated     
-------------------------------------------     
-``
+> ------------------------------------------     
+> COM #  - Manufacturer     
+> ------------------------------------------     
+> COM16  - Texas Instruments Incorporated            
+> COM1   - (Standard port types)     
+> COM2   - FTDI     
+> COM14  - Texas Instruments Incorporated     
+> ------------------------------------------     
 
 When creating a shortcut to ListCOMPorts.exe specify the target as:     
 `cmd /k "D:\Essential Software\Drivers\USB-Serial\listComPorts.exe"`     
